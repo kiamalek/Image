@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "nature-model.jpg",
+      "filename" : "nature2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "animals.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "cars-model.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
