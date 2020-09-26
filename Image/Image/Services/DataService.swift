@@ -15,13 +15,32 @@ class DataService {
         ObjectModel(title: "Elephent", imageName: "animal3.jpg")
     ]
     private let cars = [
-    ObjectModel(title: "Porsche", imageName: "car1.jpg"),
-    ObjectModel(title: "Ferrari", imageName: "car2.jpg"),
-    ObjectModel(title: "Hyundai", imageName: "car3.jpg")
+        ObjectModel(title: "Porsche", imageName: "car1.jpg"),
+        ObjectModel(title: "Ferrari", imageName: "car2.jpg"),
+        ObjectModel(title: "Hyundai", imageName: "car3.jpg")
     ]
     private let natures = [
         ObjectModel(title: "Lake", imageName: "nature1.jpg"),
         ObjectModel(title: "Montain", imageName: "nature2.png"),
         ObjectModel(title: "River", imageName: "nature3.jpg")
     ]
+    /* func getAnimals() -> [ObjectModel] {
+     return animals
+     }
+     */
+    func getImages(title: String) -> [ObjectModel] {
+        if title == "animals" {
+            return animals
+        } else if title == "cars" {
+            return cars
+        } else if title == "natures" {
+            return natures
+            
+        } else {
+            return animals
+        }
+        
+        
+    }
+    
 }
