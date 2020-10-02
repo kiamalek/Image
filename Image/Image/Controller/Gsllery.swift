@@ -13,6 +13,7 @@ class Gsllery: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var showSelectedItem: UILabel!
     var selectedItem = ""
+    var selectedImage :ObjectModel!
     var images = [ObjectModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,12 @@ class Gsllery: UIViewController {
         tableView.delegate = self
         tableView.reloadData()
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? DetailVC {
+            detailVC.object = self.selectedImage
+            
+        }
     }
     
 
@@ -44,5 +51,10 @@ extension Gsllery: UITableViewDelegate, UITableViewDataSource {
          
     }
     
-    
-}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedImage = images[indexPath.row]
+        performSegue(withIdentifier: "DetailVC", sender: self)
+        
+    }
+   }
+

@@ -29,11 +29,11 @@ class DataService {
      }
      */
     func getImages(title: String) -> [ObjectModel] {
-        if title == "animals" {
+        if title == "Animals" {
             return animals
-        } else if title == "cars" {
+        } else if title == "Cars" {
             return cars
-        } else if title == "natures" {
+        } else if title == "Natures" {
             return natures
             
         } else {
